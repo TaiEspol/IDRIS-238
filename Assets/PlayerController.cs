@@ -18,18 +18,51 @@ public class PlayerController : MonoBehaviour {
 	private bool dobleSalto;
 	private bool moviendo = true;
 
+	CircleCollider2D colliderAtaque;
+	Vector2 mov;
 	// Use this for initialization
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
 		spr = GetComponent<SpriteRenderer>();
 		live = vidas.GetComponent<vida>();
+		colliderAtaque = transform.GetChild(1).GetComponent<CircleCollider2D>();
+		colliderAtaque.enabled = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		mov = new Vector2(Input.GetAxisRaw("Horizontal"),
+			Input.GetAxisRaw("Vertical"));
+
 		anim.SetFloat("speed",Mathf.Abs(rb2d.velocity.x));
 		anim.SetBool("tocar suelo",tocarsuelo);
+		if(tocarsuelo) {
+			anim.SetBool("caminar",true);
+		}else{
+			anim.SetBool("caminar",false);
+		}
+
+		AnimatorStateInfo infoEstado = anim.GetCurrentAnimatorStateInfo(0); 
+		bool atacando = infoEstado.IsName("Player_atacar");
+		if(Input.GetKey(KeyCode.X) && !atacando) {
+			anim.SetTrigger("atacar");
+		}
+		if(mov != Vector2.zero) {
+			if(mov.x > 0f){
+				colliderAtaque.offset = new Vector2(-0.1200009f,-0.4380895f);
+			}else{
+				colliderAtaque.offset = new Vector2(0.1200009f,-0.4380895f);
+			}
+		}
+
+		if(atacando){
+			float playbackTime = infoEstado.normalizedTime;
+			if(playbackTime > 0.20 && playbackTime < 0.66) colliderAtaque.enabled = true;
+			else colliderAtaque.enabled = false;
+		}
+		
+
 		if(Input.GetKeyDown(KeyCode.UpArrow)) {
 			if(tocarsuelo){
 				saltar = true;
@@ -38,8 +71,9 @@ public class PlayerController : MonoBehaviour {
 				saltar = true;
 				dobleSalto = false;
 			}
-			
 		}
+
+
 	}
 	void FixedUpdate () {
 
