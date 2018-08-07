@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour {
 
 		AnimatorStateInfo infoEstado = anim.GetCurrentAnimatorStateInfo(0); 
 		bool atacando = infoEstado.IsName("Player_atacar");
+		
 		if(Input.GetKey(KeyCode.X) && !atacando) {
 			anim.SetTrigger("atacar");
 		}
@@ -58,7 +59,8 @@ public class PlayerController : MonoBehaviour {
 
 		if(atacando){
 			float playbackTime = infoEstado.normalizedTime;
-			if(playbackTime > 0.20 && playbackTime < 0.66) colliderAtaque.enabled = true;
+
+			if(playbackTime > 0.5 && playbackTime < 0.24) colliderAtaque.enabled = true;
 			else colliderAtaque.enabled = false;
 		}
 		
