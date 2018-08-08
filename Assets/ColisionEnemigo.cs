@@ -21,8 +21,9 @@ public class ColisionEnemigo : MonoBehaviour {
         {
             
             anim.Play(estadoDestruir);
-            yield return new WaitForSeconds(timeForDisable);
             colliderHijo.enabled = false;
+            yield return new WaitForSeconds(timeForDisable);
+            
             /*foreach(Collider2D c in GetComponents<Collider2D>()){
                 c.enabled = false;
             }*/
