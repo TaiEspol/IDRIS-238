@@ -8,6 +8,7 @@ TagManager:
   - Plaform
   - Corazon
   - Lava
+  - Atacar
   layers:
   - Default
   - TransparentFX

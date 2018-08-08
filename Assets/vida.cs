@@ -18,7 +18,7 @@ public class vida : MonoBehaviour {
 		for(int i = 0; i < cuantos;i++) {
 			temo = Instantiate<Image>(corazoness);
 			temo.transform.SetParent (this.transform,false);
-			temo.transform.Translate(0 + i,0f,0f) ;
+			temo.transform.Translate(0f + i,0f,0f) ;
 			temo.name="cor" + i;
 		}
 	}

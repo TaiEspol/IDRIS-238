@@ -4,21 +4,30 @@ using UnityEngine;
 
 public class ColisionEnemigo : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public string estadoDestruir;
 
-    void OnTriggerEnter2D(Collider2D col)
+    public float timeForDisable;
+
+	// Use this for initialization
+    Animator anim;
+    Collider2D colliderHijo;
+	void Start () {
+		anim = GetComponent<Animator>();
+        colliderHijo = transform.GetChild(0).GetComponent<Collider2D>();
+	}
+	IEnumerator OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.tag == "Atacar")
         {
-            float yOffset = 0.2f;
+            
+            anim.Play(estadoDestruir);
+            yield return new WaitForSeconds(timeForDisable);
+            colliderHijo.enabled = false;
+            /*foreach(Collider2D c in GetComponents<Collider2D>()){
+                c.enabled = false;
+            }*/
+            
+            /*float yOffset = 0.2f;
             if (transform.position.y + yOffset < col.transform.position.y)
             {
                 col.SendMessage("EnemyJump");
@@ -27,8 +36,22 @@ public class ColisionEnemigo : MonoBehaviour {
             else
             {
                 col.SendMessage("EnemyKnockBack", transform.position.x);
-            }
+            }*/
 
         }
+
+        if (col.gameObject.tag == "Player"){
+           col.SendMessage("EnemyKnockBack", transform.position.x);
+        }
     }
+
+	// Update is called once per frame
+	void Update () {
+		AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
+        if(stateInfo.IsName(estadoDestruir) && stateInfo.normalizedTime >= 0.45){
+           Destroy(gameObject);
+        }
+	}
+
+
 }

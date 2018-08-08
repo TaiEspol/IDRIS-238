@@ -37,11 +37,6 @@ public class PlayerController : MonoBehaviour {
 
 		anim.SetFloat("speed",Mathf.Abs(rb2d.velocity.x));
 		anim.SetBool("tocar suelo",tocarsuelo);
-		if(tocarsuelo) {
-			anim.SetBool("caminar",true);
-		}else{
-			anim.SetBool("caminar",false);
-		}
 
 		AnimatorStateInfo infoEstado = anim.GetCurrentAnimatorStateInfo(0); 
 		bool atacando = infoEstado.IsName("Player_atacar");
@@ -49,18 +44,9 @@ public class PlayerController : MonoBehaviour {
 		if(Input.GetKey(KeyCode.X) && !atacando) {
 			anim.SetTrigger("atacar");
 		}
-		if(mov != Vector2.zero) {
-			if(mov.x > 0f){
-				colliderAtaque.offset = new Vector2(-0.1200009f,-0.4380895f);
-			}else{
-				colliderAtaque.offset = new Vector2(0.1200009f,-0.4380895f);
-			}
-		}
-
 		if(atacando){
 			float playbackTime = infoEstado.normalizedTime;
-
-			if(playbackTime > 0.5 && playbackTime < 0.24) colliderAtaque.enabled = true;
+			if(playbackTime > 0.0 && playbackTime < 0.8) colliderAtaque.enabled = true;
 			else colliderAtaque.enabled = false;
 		}
 		
