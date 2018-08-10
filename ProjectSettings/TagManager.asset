@@ -49,3 +49,6 @@ TagManager:
   - name: Player
     uniqueID: 2573423095
     locked: 0
+  - name: GameOver
+    uniqueID: 481441779
+    locked: 0

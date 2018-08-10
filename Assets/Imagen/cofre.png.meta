@@ -5,6 +5,9 @@ TextureImporter:
     21300000: cofre_0
     21300002: cofre_1
     21300004: cofre_2
+    21300006: cofre_3
+    21300008: cofre_4
+    21300010: cofre_5
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -90,10 +93,10 @@ TextureImporter:
         serializedVersion: 2
         x: 5
         y: 247
-        width: 43
+        width: 37
         height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -108,12 +111,12 @@ TextureImporter:
       name: cofre_1
       rect:
         serializedVersion: 2
-        x: 1
-        y: 195
-        width: 47
-        height: 46
+        x: 5
+        y: 199
+        width: 37
+        height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -128,18 +131,78 @@ TextureImporter:
       name: cofre_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 11
-        width: 49
-        height: 178
+        x: 5
+        y: 12
+        width: 37
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 5bde01fc829da8d49bb60633729cb842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cofre_3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 51
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24fe784bf5d5bf6408f814a486120a50
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cofre_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 103
+        width: 49
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97818e88ed9fa0f4089c26955d0e90ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cofre_5
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 151
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de869d2ed3a7b4743a66943934de6432
       vertices: []
       indices: 
       edges: []

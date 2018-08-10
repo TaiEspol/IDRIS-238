@@ -8,6 +8,7 @@ public class vida : MonoBehaviour {
 	public int numVida = 5;
 	int vidas;
 	public Image corazoness;
+	public GameObject camaraGameOver;
 	// Use this for initialization
 	void Start () {
 		DibujarCorazones (numVida);
@@ -34,6 +35,13 @@ public class vida : MonoBehaviour {
 	public void QuitarVida() {
 		vidas--;
 		CambiarCorazon(vidas,false);
+	}
+
+	// Update is called once per frame
+	void Update () {
+        if(vidas == 0){
+           camaraGameOver.SetActive(true);
+        }
 	}
 	
 }

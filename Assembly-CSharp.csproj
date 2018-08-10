@@ -66,6 +66,7 @@
     <Compile Include="Assets\botonMenu.cs" />
     <Compile Include="Assets\CameraFollow.cs" />
     <Compile Include="Assets\CheaquearSuelo.cs" />
+    <Compile Include="Assets\CofreController.cs" />
     <Compile Include="Assets\ColisionEnemigo.cs" />
     <Compile Include="Assets\ColisionLava.cs" />
     <Compile Include="Assets\Destructor.cs" />

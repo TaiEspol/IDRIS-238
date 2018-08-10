@@ -49,7 +49,7 @@ public class ColisionEnemigo : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
-        if(stateInfo.IsName(estadoDestruir) && stateInfo.normalizedTime >= 0.45){
+        if(stateInfo.IsName(estadoDestruir) && stateInfo.normalizedTime >= 0.35){
            Destroy(gameObject);
         }
 	}

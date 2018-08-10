@@ -57,10 +57,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4648737216784750}
   - component: {fileID: 58694175513187216}
-  - component: {fileID: 114118676247070300}
   m_Layer: 8
   m_Name: ColisionAtacar
-  m_TagString: Player
+  m_TagString: Atacar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,8 +84,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1877999689366724}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.050000045, y: 0.32599998, z: 0}
-  m_LocalScale: {x: 1.0000043, y: 0.9999973, z: 1}
+  m_LocalPosition: {x: 0.05000005, y: 0.32599998, z: 0}
+  m_LocalScale: {x: 1.000004, y: 0.9999973, z: 1}
   m_Children: []
   m_Father: {fileID: 4786592254702768}
   m_RootOrder: 1
@@ -168,9 +167,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.15251867, y: -0.43123877}
+  m_Offset: {x: 0.26995316, y: -0.43123877}
   serializedVersion: 2
-  m_Radius: 0.12865879
+  m_Radius: 0.24609338
 --- !u!95 &95326275335739772
 Animator:
   serializedVersion: 3
@@ -205,17 +204,6 @@ MonoBehaviour:
   tocarsuelo: 0
   fuerzaSalto: 7
   vidas: {fileID: 0}
---- !u!114 &114118676247070300
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1877999689366724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11fd5325d4ad2ba4b84fc69d2baf3127, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114605820078490632
 MonoBehaviour:
   m_ObjectHideFlags: 1
