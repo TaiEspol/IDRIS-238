@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour {
 	public bool tocarsuelo;
 	public float fuerzaSalto = 6.5f;
 	public GameObject vidas;
+	public AudioClip saltoClip;
+	public AudioClip caminarClip;
+	public AudioClip pelearClip;
 
 	private vida live;
 	private Rigidbody2D rb2d;
@@ -18,8 +21,9 @@ public class PlayerController : MonoBehaviour {
 	private bool dobleSalto;
 	private bool moviendo = true;
 
+	int numVidas;
+
 	CircleCollider2D colliderAtaque;
-	Vector2 mov;
 	// Use this for initialization
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D>();
@@ -32,8 +36,7 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		mov = new Vector2(Input.GetAxisRaw("Horizontal"),
-			Input.GetAxisRaw("Vertical"));
+		
 
 		anim.SetFloat("speed",Mathf.Abs(rb2d.velocity.x));
 		anim.SetBool("tocar suelo",tocarsuelo);
@@ -118,15 +121,20 @@ public class PlayerController : MonoBehaviour {
 		Invoke("ActivarMovimiento",0.7f);
 		spr.color = Color.red;
 		 
-		Invoke("Quitarlive",0.1f);
+		Quitarlive();
 	}
 	void ActivarMovimiento(){
 		moviendo = true;
 		spr.color = Color.white;
 	}
-
 	void Quitarlive(){
-		live.QuitarVida();
-		transform.position = new Vector3(0,0,0);
+		numVidas = live.getVida();
+		if( numVidas > 0){
+			live.QuitarVida();
+			transform.position = new Vector3(0,0,0);
+		}else{
+
+		}
+		
 	}
 }

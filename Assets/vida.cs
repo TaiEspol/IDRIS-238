@@ -9,6 +9,7 @@ public class vida : MonoBehaviour {
 	int vidas;
 	public Image corazoness;
 	public GameObject camaraGameOver;
+
 	// Use this for initialization
 	void Start () {
 		DibujarCorazones (numVida);
@@ -42,6 +43,10 @@ public class vida : MonoBehaviour {
         if(vidas == 0){
            camaraGameOver.SetActive(true);
         }
+	}
+
+	public int getVida() {
+		return vidas;
 	}
 	
 }

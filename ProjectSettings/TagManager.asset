@@ -52,3 +52,6 @@ TagManager:
   - name: GameOver
     uniqueID: 481441779
     locked: 0
+  - name: Victory
+    uniqueID: 3091902695
+    locked: 0
