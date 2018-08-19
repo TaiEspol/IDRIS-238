@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
 	public AudioClip saltoClip;
 	public AudioClip caminarClip;
 	public AudioClip pelearClip;
+	public AudioClip lastimarClip;
 
 	private vida live;
 	private Rigidbody2D rb2d;

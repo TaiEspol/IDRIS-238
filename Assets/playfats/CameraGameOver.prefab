@@ -93,7 +93,8 @@ GameObject:
   - component: {fileID: 61295191975432846}
   - component: {fileID: 114575707881188508}
   - component: {fileID: 82434098719441728}
-  m_Layer: 5
+  - component: {fileID: 95003015130755592}
+  m_Layer: 0
   m_Name: TextJugar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +117,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1940426667517508
 GameObject:
   m_ObjectHideFlags: 1
@@ -130,6 +131,7 @@ GameObject:
   - component: {fileID: 114777484226193534}
   - component: {fileID: 61720869998824004}
   - component: {fileID: 82326352522024394}
+  - component: {fileID: 95645919784950022}
   m_Layer: 5
   m_Name: TextSalir
   m_TagString: Untagged
@@ -250,7 +252,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.65543365, y: -0.6555691}
+  m_Offset: {x: 0.35695648, y: -0.6555691}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -261,7 +263,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 109.82536, y: 29.844807}
+  m_Size: {x: 115.19795, y: 29.844807}
   m_EdgeRadius: 0
 --- !u!82 &82326352522024394
 AudioSource:
@@ -548,6 +550,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &95003015130755592
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1408872599923950}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 82baa25292c53f44a82585ae43da9410, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &95325083045832566
 Animator:
   serializedVersion: 3
@@ -576,6 +596,24 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ad430349d34ec534899b0d175f49150a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95645919784950022
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1940426667517508}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 82baa25292c53f44a82585ae43da9410, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

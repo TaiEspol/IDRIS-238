@@ -6,18 +6,27 @@ using UnityEngine.SceneManagement;
 public class botonMenu : MonoBehaviour {
 
 	private AudioSource musicaBoton;
+	private Animator anim;
 	// Use this for initialization
 	void Start () {
 		musicaBoton = GetComponent<AudioSource>();
+		anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown(0)) {
-			musicaBoton.Play();
-		}
+		
 	}
 	void OnMouseDown(){
+		musicaBoton.Play();
 	 	SceneManager.LoadScene("Menu");
 	 }
+	 void OnMouseOver()
+    {
+        anim.SetBool("encima",true);
+    }
+    void OnMouseExit()
+    {
+    	anim.SetBool("encima",false);
+    }
 }
