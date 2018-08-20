@@ -71,6 +71,7 @@
     <Compile Include="Assets\CofreController.cs" />
     <Compile Include="Assets\ColisionEnemigo.cs" />
     <Compile Include="Assets\ColisionLava.cs" />
+    <Compile Include="Assets\Continuar.cs" />
     <Compile Include="Assets\Destructor.cs" />
     <Compile Include="Assets\DIbujarLinea.cs" />
     <Compile Include="Assets\Enemigo.cs" />
